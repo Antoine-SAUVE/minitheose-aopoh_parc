@@ -12,6 +12,9 @@ cd migrations
 sqitch init oparc --engine pg
 sqitch add init -n "création de la structure de base"
 
+sqitch add insertData -n "Import du premier jeux de données"
+
+
 # je déploie en appelant mon script de déploiement
 bash sqitch_revert
 bash sqitch_deploy

@@ -5,7 +5,7 @@ BEGIN;
 -- on crèe un domaine pint, qui implique la nécessité que la VALUE soit supérieure à 0
 CREATE DOMAIN pint AS int CHECK(VALUE > 0);
 
--- on crèe notre table
+-- on crèe nos tables
 CREATE TABLE attraction (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name TEXT NOT NULL UNIQUE,
@@ -13,12 +13,13 @@ CREATE TABLE attraction (
     author TEXT NOT NULL,
     open_time timestamptz NOT NULL,
     close_time timestamptz NOT NULL,
-    duration pint NOT NULL,
+    duration pint NOT NULL, -- en minutes
     CHECK (open_time < close_time)
 );
 
 CREATE TABLE visitor (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    ticket_number pint NOT NULL UNIQUE,
     start_validity timestamptz NOT NULL,
     end_validity timestamptz NOT NULL,
     CHECK (start_validity < end_validity)
