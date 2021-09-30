@@ -14,6 +14,7 @@ sqitch add init -n "création de la structure de base"
 
 sqitch add insertData -n "Import du premier jeux de données"
 
+sqitch add create_acl -n "Création des ACL et des vues"
 
 # je déploie en appelant mon script de déploiement
 bash sqitch_revert
