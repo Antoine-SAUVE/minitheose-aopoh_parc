@@ -1,6 +1,8 @@
 DROP DATABASE IF EXISTS oparc;
 
-DROP ROLE IF EXISTS oparc, oparc_maintenance, oparc_visitor;
+DROP ROLE IF EXISTS oparc_maintenance;
+DROP ROLE IF EXISTS oparc_visitor;
+DROP ROLE IF EXISTS oparc;
 
 -- Création des roles de notre BDD
 CREATE ROLE oparc WITH LOGIN ENCRYPTED PASSWORD 'oparc';

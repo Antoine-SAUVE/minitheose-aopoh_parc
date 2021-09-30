@@ -2,6 +2,6 @@
 
 BEGIN;
 
--- XXX Add DDLs here.
+DROP VIEW IF EXISTS booking_for_visitor, attraction_with_incident;
 
 COMMIT;
