@@ -5,7 +5,7 @@ SELECT id, name, capacity, author, open_time, close_time, duration
 FROM attraction WHERE false;
 
 
-SELECT id, start_validity,end_validity 
+SELECT id, ticket_number, start_validity,end_validity 
 FROM visitor WHERE false;
 
 SELECT id, attraction_id, visitor_id 
