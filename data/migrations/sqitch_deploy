@@ -1,0 +1,8 @@
+# j'initialise les variables d'environnement
+export SQITCH_USERNAME=oparc
+export SQITCH_PASSWORD=oparc
+
+# je déploie
+sqitch deploy db:pg:oparc
+unset SQITCH_USERNAME
+unset SQITCH_PASSWORD
