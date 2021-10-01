@@ -1,10 +1,16 @@
 const datamapper = require('../datamapper');
 
 const newIncidentController = {
-    createIncident: async function (req, res, next){
-
-        
+    
+    createIncident: async function (req, res){
+        const form = req.body;
+        console.log(form);
+        const updateResult = await datamapper.createIncident(form);
+                
+        res.redirect('home');
     }
+        
 };
+
 
 module.exports = newIncidentController;

@@ -1,6 +1,29 @@
 <%- include('partials/header')%>
 <!-- balise précédente : body -->
+<h1>Liste des incidents en cours</h1>
 
+<div>
+    <% for (const incident of incidents) { %>
+        <% if (!incident.resolved_date){ %>
+            <h2> Attraction : <%= incident.name %></h2>
+                <ul>
+                    <li>Capacité : <%= incident.capacity %> personnes</li>
+                    <li>Date et heure d'ouverture : <%= incident.open_time %></li>
+                    <li>Date et heure de fermeture : <%= incident.close_time %></li>
+                    <li>Durée de l'attraction : <%= incident.duration %> minutes</li>
+                </ul>
+                
+                <h2>Numéro d'incident : <%=incident.incidentid%></h2>
+                <h3>Description de l'incident</h3>
+                <p><%=incident.description%></p>
+                <ul>
+                    <li>Technicien : <%=incident.technician%></li>
+                    <li>Date de l'incident : <%=incident.incident_date%></li>
+                    <li>Date de résolution : <%=incident.resolved_date%></li>
+                </ul>
+            <% } %>
+    <% } %>
+</div>
 
 <!-- balise suivante : body -->
 <%- include('partials/footer')%>

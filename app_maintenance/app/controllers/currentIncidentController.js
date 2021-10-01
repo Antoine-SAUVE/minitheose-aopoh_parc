@@ -7,18 +7,19 @@ const currentIncidentController = {
         const result = await datamapper.findIncidentById(incidentId);
 
         res.render('incident', {
-            incidentById : result.rows[0]
-        });    
+            incident : result.rows[0]
+        });  
+        // res.json(result.rows[0]);  
     },
 
     modifyOneIncident: async function (req, res){
         const incidentId = parseInt(req.params.id, 10);
         const form = req.body;
-
-        const updateResult = await datamapper.updateIncicent(incidentId, form);
-
-        res.json(updateResult);
-        // res.redirect('incident');
+        console.log(form);
+        const updateResult = await datamapper.updateIncident(req.params.id, form);
+        
+        
+        res.redirect('home');
     }
 };
 
