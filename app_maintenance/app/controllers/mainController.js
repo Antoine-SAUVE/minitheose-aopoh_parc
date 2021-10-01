@@ -9,7 +9,7 @@ const mainController = {
         res.render('home', {
             incidents: result.rows
         });
-
+        // res.json(result.rows);
     }
 };
 

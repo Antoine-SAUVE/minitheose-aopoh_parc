@@ -16,9 +16,9 @@ router.get('/incident/:id', currentIncidentController.getIncidentById);
 router.post('/incident/:id', currentIncidentController.modifyOneIncident);
 
 // ouverture d'un incident
-router.get('/incident/new');
+router.get('/incidentnew', newIncidentController.getNewIncident);
 
-router.post('/incident/new', newIncidentController.createIncident);
+router.post('/incidentnew', newIncidentController.createIncident);
 
 
 module.exports = router;

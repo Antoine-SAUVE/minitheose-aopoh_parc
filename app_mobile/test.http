@@ -2,11 +2,16 @@ GET http://localhost:3005/init
 Content-Type: application/json
 
 {
-        "number": 59
+        "number": 666
     
 }
 
 
 
+
 GET http://localhost:3005/events
+Content-Type: application/json
+
+
+GET http://localhost:3005/bookings
 Content-Type: application/json

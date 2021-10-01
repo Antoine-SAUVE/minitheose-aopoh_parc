@@ -20,15 +20,22 @@ GET http://localhost:3003/
 
 # -- Route pour afficher un incident
 GET http://localhost:3003/incident/2
-Content-Type: application/json
 
 # -- Route pour modifier un incident
 POST http://localhost:3003/incident/2
 Content-Type: application/json
+
 {
-  "close_time": "2021-09-30T16:30:00.000Z",
-  "description": "Défault ceinture sécurité premier wagon",
-  "technician": "Nib HELULE 2",
-  "incident_date": "2021-08-02T12:25:00.000Z",
-  "resolved_date": "2021-08-03T17:25:00.000Z"
+    "description": "Défault ceinture sécurité premier wagon",
+    "technician": "tatatata",
+    "resolved_date": null
+}
+
+POST http://localhost:3003/incidentnew
+Content-Type: application/json
+
+{
+    "description": "Défault ceinture sécurité premier wagon",
+    "technician": "tatatata",
+    "resolved_date": null
 }

@@ -1,31 +1,42 @@
 const pool = require('./database');
 
 const datamapper = {
-    getAllIncident: async (incidents) => {
+    getAllIncident: async () => {
         const query = {
             text:"SELECT * FROM attraction_with_incident"
         };
         return await pool.query(query);
     },
 
-    findIncidentById: async (incidentId, callback) => {
+    findIncidentById: async (incidentId) => {
         const query = {
             text: "SELECT * FROM attraction_with_incident WHERE incidentid=$1",
             values:[incidentId]
         };
-        return await pool.query(query, callback);
+        return await pool.query(query);
     },
 
-    updateIncicent: async (updateId, form) => {
+    updateIncident: async (updateId, form) => {
         const query = {
             text:`
-                UPDATE attraction_with_incident 
-                SET close_time=$1, description=$2 ,technician=$3, incident_date=$4, resolved_date=$5
-                WHERE incidentId = $6;`,
-            values: [close_time, description, technician, incident_date, resolved_date, updateId]
+                UPDATE incident 
+                SET description=$1 ,technician=$2, resolved_date=$3
+                WHERE id = $4;`,
+            values: [form.description, form.technician, form.resolved_date, updateId]
         };
 
-        return await pool.query
+        return await pool.query(query);
+    },
+
+    createIncident: async (form) => {
+        const query = {
+            text:`
+                INSERT INTO incident (attraction_id, description, technician, incident_date)
+                VALUES($1, $2, $3, $4)`,
+            values: [form.attraction, form.description, form.technician, form.incident_date]
+        };
+
+        return await pool.query(query);
     }
 };
 

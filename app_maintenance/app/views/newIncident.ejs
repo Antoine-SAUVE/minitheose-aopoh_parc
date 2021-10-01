@@ -1,0 +1,34 @@
+<%- include('partials/header')%>
+<!-- balise précédente : body -->
+<h1>Déclaration d'incident</h1>
+<form action="" method="POST">
+<div>
+    <label for="attraction-select">Choisissez l'attraction concernée:</label>
+
+<select name="attraction" id="attraction-select">
+    <option value="">--Choisissez l'attraction--</option>
+    <option value="1">Leviathan </option>
+    <option value="2">Fury 325</option>
+    <option value="3">Steel Dragon 2000</option>
+    <option value="4">Millennium Force</option>
+    
+</select>
+
+
+    <div>
+        <label for="description">Description du problème : </label>
+        <input type="text" name="description" >
+    </div>
+    <div>
+        <label for="technician">Nom du technicien : </label>
+        <input type="text" name="technician">
+    </div>
+    <div>
+        <label for="incident_date">Date de l'incident : </label>
+        <input type="text" name="incident_date" placeholder="format : 2021-08-02T12:25:00.000Z">
+    </div>
+
+    <input type="submit" value="Envoyer">
+</form>
+<!-- balise suivante : body -->
+<%- include('partials/footer')%>
