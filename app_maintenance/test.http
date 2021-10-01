@@ -30,3 +30,12 @@ Content-Type: application/json
     "technician": "tatatata",
     "resolved_date": null
 }
+
+POST http://localhost:3003/incidentnew
+Content-Type: application/json
+
+{
+    "description": "Défault ceinture sécurité premier wagon",
+    "technician": "tatatata",
+    "resolved_date": null
+}

@@ -19,7 +19,7 @@ const currentIncidentController = {
         const updateResult = await datamapper.updateIncident(req.params.id, form);
         
         
-        res.redirect('home');
+        res.redirect('/');
     }
 };
 

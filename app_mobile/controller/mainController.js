@@ -14,8 +14,6 @@ const mainController = {
         console.log('visitorData:'+visitorId)
     },
 
-
-
     events:async(req,res)=>{
         let result = await dataMapper.events();
         console.log(result.rows);     

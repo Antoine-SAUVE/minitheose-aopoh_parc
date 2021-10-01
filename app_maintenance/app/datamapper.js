@@ -32,8 +32,8 @@ const datamapper = {
         const query = {
             text:`
                 INSERT INTO incident (attraction_id, description, technician, incident_date)
-                VALUES($1, $2, $3)`,
-            values: [form.attraction_id, form.description, form.technician, form.resolved_date]
+                VALUES($1, $2, $3, $4)`,
+            values: [form.attraction, form.description, form.technician, form.incident_date]
         };
 
         return await pool.query(query);
