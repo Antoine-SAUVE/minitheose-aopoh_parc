@@ -24,6 +24,8 @@ CREATE VIEW attraction_with_incident AS (
 );
 
 -- un grant sur opar_maintenance pour donner gérer les incidences
-GRANT SELECT, INSERT, UPDATE ON attraction_with_incident TO oparc_maintenance; 
+GRANT SELECT, INSERT ON attraction_with_incident TO oparc_maintenance;
+GRANT SELECT, INSERT, UPDATE ON attraction TO oparc_maintenance;
+GRANT SELECT, INSERT, UPDATE ON incident TO oparc_maintenance;
 
 COMMIT;
