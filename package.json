@@ -1,0 +1,21 @@
+{
+  "name": "aopoh",
+  "version": "1.0.0",
+  "description": "API de la team Aopoh Parc !",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app_maintenance/index.js",
+    "startbook" : "node app_mobile/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Valhalla/aopoh_parc.git"
+  },
+  "author": "aopoh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-Valhalla/aopoh_parc/issues"
+  },
+  "homepage": "https://github.com/O-clock-Valhalla/aopoh_parc#readme"
+}

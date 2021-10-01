@@ -1,15 +1,21 @@
 require("dotenv").config({ path: __dirname + '/.env' });
 
 const express = require("express");
-
 const app = express();
+
+app.use(express.static("public"));
 
 app.use(express.json());
 
-// const router = require("./router.js");
-// app.use(router);
+const router = require("./app/router");
+app.use(router);
+
+
+//Moteur de rendu -> ejs
+app.set('view engine', 'ejs');
+app.set("views", __dirname + '/app/views');
 
 const PORT = process.env.PORT || 3002;
 app.listen(PORT,()=>{
-    console.log(`Votre serveur est démarré et prêt à répondre à tout requête sur le port http://localhost:${PORT}.`);
+    console.log(`Les Aopoh écoutent vos incidents sur http://localhost:${PORT}`);
 });
