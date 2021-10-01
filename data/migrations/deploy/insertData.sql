@@ -3,18 +3,18 @@
 BEGIN;
 
 INSERT INTO public.attraction(
-	name, capacity, open_time, close_time, duration)
+	name, capacity, open_time, close_time, duration, open)
 	VALUES 
-    ('Leviathan', 20, '2021-09-30 08:00:00', '2021-09-30 18:30:00', 4),
-    ('Fury 325', 30, '2021-09-30 08:00:00', '2021-09-30 18:30:00', 3),
-    ('Steel Dragon 2000', 25, '2021-09-30 08:00:00', '2021-09-30 18:30:00', 5),
-    ('Millennium Force', 30, '2021-09-30 08:00:00', '2021-09-30 18:30:00', 2);
+    ('Leviathan', 20, '2021-09-30 08:00:00', '2021-09-30 18:30:00', 4, 't'),
+    ('Fury 325', 30, '2021-09-30 08:00:00', '2021-09-30 18:30:00', 3, 'f'),
+    ('Steel Dragon 2000', 25, '2021-09-30 08:00:00', '2021-09-30 18:30:00', 5, 'f'),
+    ('Millennium Force', 30, '2021-09-30 08:00:00', '2021-09-30 18:30:00', 2, 't');
 
 INSERT INTO public.incident(
 	description, technician, incident_date, resolved_date, attraction_id)
-	VALUES ('Problème de roulements sur la voiture 2', 'Pierre MARIE', '2021-07-15 19:25:00','2021-03-20 10:35:00', 2),
+	VALUES ('Problème de roulements sur la voiture 2', 'Pierre MARIE', '2021-07-15 19:25:00', NULL, 2),
     ('Défault ceinture sécurité premier wagon', 'Nib HELULE', '2021-08-02 14:25:00','2021-08-03 19:25:00', 3),
-    ('Ecrous desserés au niveau du moteur (tout va bien)', 'Sim HOFF', '2021-09-11 11:30:00', '2021-09-11 15:30:00', 3),
+    ('Ecrous desserés au niveau du moteur (tout va bien)', 'Sim HOFF', '2021-09-11 11:30:00', NULL, 3),
     ('Mécanisme de freins à changer en urgence sur tous le manege', 'Nib HELULE', '2021-07-14 11:00:00', '2021-07-14 12:00:00', 4);
 
 INSERT INTO public.visitor(

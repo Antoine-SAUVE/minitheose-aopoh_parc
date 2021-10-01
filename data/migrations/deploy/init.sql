@@ -13,6 +13,7 @@ CREATE TABLE attraction (
     open_time timestamptz NOT NULL,
     close_time timestamptz NOT NULL,
     duration pint NOT NULL, -- en minutes
+    open boolean NOT NULL DEFAULT 'true',
     CHECK (open_time < close_time)
 );
 
@@ -42,7 +43,7 @@ CREATE TABLE incident (
     description text NOT NULL,
     technician text NOT NULL,
     incident_date timestamptz NOT NULL,
-    resolved_date timestamptz NOT NULL,
+    resolved_date timestamptz,
     attraction_id INTEGER NOT NULL REFERENCES attraction(id) ON DELETE CASCADE
 );
 
