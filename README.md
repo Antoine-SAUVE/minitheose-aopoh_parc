@@ -1,4 +1,4 @@
-# O'parc, un petit parc d'attraction avec de grandes ambitions
+# Aopoh'parc, un petit parc d'attraction de l'équipe RED avec de grandes ambitions !! 
 
 Ça y est, on connaît tout ce qu'il nous faut pour coder l'API d'O'parc de A à Z. C'est parti pour 2 jours de code et de SQL non-stop.
 
