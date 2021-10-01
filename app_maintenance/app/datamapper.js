@@ -28,12 +28,12 @@ const datamapper = {
         return await pool.query(query);
     },
 
-    createIncident: async (insertId, form) => {
+    createIncident: async (form) => {
         const query = {
             text:`
                 INSERT INTO incident (attraction_id, description, technician, incident_date)
                 VALUES($1, $2, $3)`,
-            values: [insertId, form.description, form.technician, form.resolved_date]
+            values: [form.attraction_id, form.description, form.technician, form.resolved_date]
         };
 
         return await pool.query(query);

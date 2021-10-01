@@ -1,46 +1,20 @@
 <%- include('partials/header')%>
 <!-- balise précédente : body -->
 <h1>Déclaration d'incident</h1>
-
+<form action="" method="POST">
 <div>
     <label for="attraction-select">Choisissez l'attraction concernée:</label>
 
 <select name="attraction" id="attraction-select">
     <option value="">--Choisissez l'attraction--</option>
-    <option value="Leviathan">Leviathan</option>
-    <option value="cat">Cat</option>
-    <option value="hamster">Hamster</option>
-    <option value="parrot">Parrot</option>
-    <option value="spider">Spider</option>
-    <option value="goldfish">Goldfish</option>
+    <option value="1">Leviathan </option>
+    <option value="2">Fury 325</option>
+    <option value="3">Steel Dragon 2000</option>
+    <option value="4">Millennium Force</option>
+    
 </select>
 
 
-
-
-
-
-
-
-    <h2> Attraction : <%= incident.name %></h2>
-        <ul>
-            <li>Capacité : <%= incident.capacity %> personnes</li>
-            <li>Date et heure d'ouverture : <%= incident.open_time %></li>
-            <li>Date et heure de fermeture : <%= incident.close_time %></li>
-            <li>Durée de l'attraction : <%= incident.duration %> minutes</li>
-        </ul>
-                
-    <h2>Numéro d'incident : <%=incident.incidentid%></h2>
-    <h3>Description de l'incident</h3>
-        <p><%=incident.description%></p>
-        <ul>
-            <li>Technicien : <%=incident.technician%></li>
-            <li>Date de l'incident : <%=incident.incident_date%></li>
-            <li>Date de résolution : <%=incident.resolved_date%></li>
-        </ul>
-</div>
-
-<form action="" method="POST">
     <div>
         <label for="description">Description du problème : </label>
         <input type="text" name="description" >
@@ -50,8 +24,8 @@
         <input type="text" name="technician">
     </div>
     <div>
-        <label for="resolved_date">Date de résolution : </label>
-        <input type="text" name="resolved_date" placeholder="format : 2021-08-02T12:25:00.000Z">
+        <label for="incident_date">Date de l'incident : </label>
+        <input type="text" name="incident_date" placeholder="format : 2021-08-02T12:25:00.000Z">
     </div>
 
     <input type="submit" value="Envoyer">
