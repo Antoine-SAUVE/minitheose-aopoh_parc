@@ -1,0 +1,22 @@
+# -- Route pour afficher les incidents
+GET http://localhost:3003/
+
+# exemple : 
+#  [
+#   {
+#     "attractionid": 2,
+#     "name": "Fury 325",
+#     "capacity": 30,
+#     "open_time": "2021-09-30T06:00:00.000Z",
+#     "close_time": "2021-09-30T16:30:00.000Z",
+#     "duration": 3,
+#     "incidentid": 1,
+#     "description": "Problème de roulements sur la voiture 2",
+#     "technician": "Pierre MARIE",
+#     "incident_date": "2021-07-15T17:25:00.000Z",
+#     "resolved_date": "2021-03-20T09:35:00.000Z"
+#   },
+
+
+
+# Content-Type: application/json

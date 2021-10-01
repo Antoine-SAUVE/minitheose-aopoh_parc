@@ -7,7 +7,7 @@ app.use(express.static("public"));
 
 app.use(express.json());
 
-const router = require("./router.js");
+const router = require("./app/router");
 app.use(router);
 
 

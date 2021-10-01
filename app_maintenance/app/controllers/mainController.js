@@ -1,13 +1,15 @@
 const datamapper = require('../datamapper');
 
 const mainController = {
-    home: async function (req, res, next){
+    home: async function (_, res){
 
-        const res = await datamapper.getAllIncident();
-        
+        const result = await datamapper.getAllIncident();
+
+        console.log(result);
         res.render('home', {
-            res: incidents
+            incidents: result.rows
         });
+
     }
 };
 
